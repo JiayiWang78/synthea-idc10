@@ -1,15 +1,15 @@
 # synthea-idc10
-🏥 Emergency Department (ED) Prediction using XGBoost
+# Emergency Department (ED) Prediction using XGBoost
 This project aims to predict whether a patient encounter requires emergency department (ED) care using structured healthcare data. It leverages machine learning techniques (especially XGBoost) and ICD-10 classification to assist clinical decision-making.
 
-📌 Project Goals
+# Project Goals
 Predict whether a patient case is likely to result in an emergency visit.
 
 Understand key features contributing to ED predictions (feature importance).
 
 Provide patient-level insights: ED probability, gender ratio, ICD-10 codes and their descriptions.
 
-🧠 Model Overview
+# Model Overview
 We used the following models:
 
 ✅ XGBoost Classifier (best overall accuracy and feature interpretability)
@@ -26,20 +26,18 @@ Confusion Matrix
 
 ROC Curve & AUC Score
 
-🔍 Dataset Description
+# Dataset Description
 The dataset includes over 700,000 patient encounters, enriched with the following features:
-
-Feature	Description
-DESCRIPTION	Procedure description
-ENCOUNTERCLASS	Type of encounter (inpatient, outpatient, etc.)
-GENDER, AGE, CITY	Patient demographics
+DESCRIPTION	        | Procedure description
+ENCOUNTERCLASS	    | Type of encounter (inpatient, outpatient, etc.)
+GENDER, AGE, CITY	| Patient demographics
 BASE_ENCOUNTER_COST, TOTAL_CLAIM_COST, PAYER_COVERAGE	Financial metrics
 ICD10CM	ICD-10 diagnosis code
 ED_label	Binary outcome: 1 = ED needed, 0 = not needed
 
 We also use an external reference table (ICD10_Reference.csv) to map ICD-10 codes to human-readable descriptions.
 
-📈 Feature Importance (XGBoost)
+# Feature Importance (XGBoost)
 Top predictive features include:
 
 ENCOUNTERCLASS_urgentcare
@@ -49,12 +47,9 @@ BASE_ENCOUNTER_COST
 ENCOUNTERCLASS_outpatient
 
 
-🧪 Demo Output
+# Demo Output
 Example: For Well child visit (procedure):
 
-yaml
-Copy
-Edit
 === Prediction Summary ===
 Description: Well child visit (procedure)
 Total patients: 43,950
@@ -66,10 +61,7 @@ Female ratio: 50.50%
 Z76.89: Persons encountering health services in other circumstances
 Z20.822: Contact with and (suspected) exposure to COVID-19
 ...
-📁 Project Structure
-bash
-Copy
-Edit
+# Project Structure
 ├── data/
 │   ├── df1_merge.csv            # Merged encounter & patient data
 │   ├── ICD10_Reference.csv      # ICD-10 → description mapping
