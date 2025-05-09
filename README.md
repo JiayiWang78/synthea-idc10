@@ -28,13 +28,12 @@ ROC Curve & AUC Score
 
 # Dataset Description
 The dataset includes over 700,000 patient encounters, enriched with the following features:
-DESCRIPTION : Procedure description,
-
-ENCOUNTERCLASS :  Type of encounter (inpatient, outpatient, etc.)
-GENDER, AGE, CITY	| Patient demographics
-BASE_ENCOUNTER_COST, TOTAL_CLAIM_COST, PAYER_COVERAGE	Financial metrics
-ICD10CM	ICD-10 diagnosis code
-ED_label	Binary outcome: 1 = ED needed, 0 = not needed
+- DESCRIPTION       | Procedure description,
+- ENCOUNTERCLASS    | Type of encounter (inpatient, outpatient, etc.)
+- GENDER, AGE, CITY	| Patient demographics
+- BASE_ENCOUNTER_COST , TOTAL_CLAIM_COST , PAYER_COVERAGE	| Financial metrics
+- ICD10CM , ICD-10 | diagnosis code
+- ED_label	Binary outcome: 1 = ED needed, 0 = not needed
 
 We also use an external reference table (ICD10_Reference.csv) to map ICD-10 codes to human-readable descriptions.
 
